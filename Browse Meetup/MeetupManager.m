@@ -23,7 +23,7 @@
 
 #pragma mark - MeetupCommunicatorDelegate
 
-// For fetchGroupsAtCoordinate
+// For fetchGroupsAtCoordinate MeetupCommunicatorDelegate methods
 - (void)receivedGroupsJSON:(NSData *)objectNotation
 {
   NSError *error = nil;
@@ -42,5 +42,23 @@
   [self.delegate fetchingGroupsFailedWithError:error];
 }
 
+// For fetchEventsForGroup MeetupCommunicatorDelegate methods
+- (void)receivedEventsJSON:(NSData *)objectNotation
+{
+  NSError *error = nil;
+  NSArray *events = [EventBuilder eventsFromJSON:objectNotation error:&error];
+  
+  if (error != nil) {
+    [self.delegate fetchingEventsFailedWithError:error];
+    
+  } else {
+    [self.delegate didReceiveEvents:events];
+  }
+}
+
+- (void)fetchingEventsFailedWithError:(NSError *)error
+{
+  [self.delegate fetchingEventsFailedWithError:error];
+}
 
 @end
