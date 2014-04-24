@@ -78,6 +78,20 @@
   NSLog(@"Error %@; %@", error, [error localizedDescription]);
 }
 
+- (void)didReceiveEvents:(NSArray *)events
+{
+  _events = events;
+  
+//  dispatch_async(dispatch_get_main_queue(), ^{
+//    [self.tableView reloadData];
+//  });
+}
+
+- (void)fetchingEventsFailedWithError:(NSError *)error
+{
+  NSLog(@"Error %@; %@", error, [error localizedDescription]);
+}
+
 #pragma mark - Table View
 
 

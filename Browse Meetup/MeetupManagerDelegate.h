@@ -12,7 +12,7 @@
 - (void)didReceiveGroups:(NSArray *)groups;
 - (void)fetchingGroupsFailedWithError:(NSError *)error;
 
-- (void)didReceiveEvents:(NSArray *)groups;
+- (void)didReceiveEvents:(NSArray *)events;
 - (void)fetchingEventsFailedWithError:(NSError *)error;
 
 @end
