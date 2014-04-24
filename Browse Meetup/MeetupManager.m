@@ -8,6 +8,7 @@
 
 #import "MeetupManager.h"
 #import "GroupBuilder.h"
+#import "EventBuilder.h"
 #import "MeetupCommunicator.h"
 
 @implementation MeetupManager

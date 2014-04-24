@@ -10,12 +10,14 @@
 
 #import "DetailCell.h"
 #import "Group.h"
+#import "Event.h"
 #import "MeetupManager.h"
 #import "MeetupCommunicator.h"
 
 
 @interface MasterViewController () <MeetupManagerDelegate> {
     NSArray *_groups;
+  	NSArray *_events;
 		MeetupManager *_manager;
 }
 @property (weak, nonatomic) CLLocationManager *locationManager;
