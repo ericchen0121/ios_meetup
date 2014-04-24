@@ -16,8 +16,14 @@
   [self.communicator searchGroupsAtCoordinate:coordinate];
 }
 
+- (void)fetchEventsForGroup:(NSString *)groupName
+{
+  [self.communicator searchEventsForGroup:groupName];
+}
+
 #pragma mark - MeetupCommunicatorDelegate
 
+// For fetchGroupsAtCoordinate
 - (void)receivedGroupsJSON:(NSData *)objectNotation
 {
   NSError *error = nil;
@@ -35,4 +41,6 @@
 {
   [self.delegate fetchingGroupsFailedWithError:error];
 }
+
+
 @end

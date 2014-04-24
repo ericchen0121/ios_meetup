@@ -20,4 +20,7 @@
 @property (weak, nonatomic) id<MeetupManagerDelegate> delegate;
 
 - (void)fetchGroupsAtCoordinate:(CLLocationCoordinate2D)coordinate;
+
+// add method for fetching Events for Group
+-(void)fetchEventsForGroup:(NSString *)groupName;
 @end

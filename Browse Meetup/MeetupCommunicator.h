@@ -15,5 +15,5 @@
 @property(weak, nonatomic) id<MeetupCommunicatorDelegate> delegate;
 
 -(void)searchGroupsAtCoordinate:(CLLocationCoordinate2D)coordinate;
-
+-(void)searchEventsForGroup:(NSString *)groupName;
 @end
