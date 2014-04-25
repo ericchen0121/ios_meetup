@@ -27,17 +27,20 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
   _manager = [[MeetupManager alloc] init];
   _manager.communicator = [[MeetupCommunicator alloc] init];
   _manager.communicator.delegate = _manager;
   _manager.delegate = self;
   
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(startFetchingGroups:)
-                                               name:@"kCLAuthorizationStatusAuthorized"
-                                             object:nil];
-  
+//  [[NSNotificationCenter defaultCenter] addObserver:self
+//                                           selector:@selector(startFetchingGroups:)
+//                                               name:@"kCLAuthorizationStatusAuthorized"
+//                                             object:nil];
+  // don't hard code this later.
+//  [_manager fetchEventsForGroup:@"DBCx-SF-Dev-Bootcamp-San-Francisco-Open-Learning"];
+  [_manager fetchEventsForGroup:@"BayNode"];
+
 }
 
 #pragma mark - Accessors
@@ -82,9 +85,9 @@
 {
   _events = events;
   
-//  dispatch_async(dispatch_get_main_queue(), ^{
-//    [self.tableView reloadData];
-//  });
+  dispatch_async(dispatch_get_main_queue(), ^{
+    [self.tableView reloadData];
+  });
 }
 
 - (void)fetchingEventsFailedWithError:(NSError *)error
@@ -94,23 +97,41 @@
 
 #pragma mark - Table View
 
+// For Groups
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//  return _groups.count;
+//}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//  DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+//  
+//  Group *group = _groups[indexPath.row];
+//  [cell.nameLabel setText:group.name];
+//  [cell.whoLabel setText:group.who];
+//  [cell.locationLabel setText:[NSString stringWithFormat:@"%@, %@", group.city, group.country]];
+//  [cell.descriptionLabel setText:group.description];
+//  
+//  return cell;
+//}
 
+// For Events
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return _groups.count;
+  return _events.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   DetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
   
-  Group *group = _groups[indexPath.row];
-  [cell.nameLabel setText:group.name];
-  [cell.whoLabel setText:group.who];
-  [cell.locationLabel setText:[NSString stringWithFormat:@"%@, %@", group.city, group.country]];
-  [cell.descriptionLabel setText:group.description];
+  Event *event = _events[indexPath.row];
+  [cell.nameLabel setText:event.name];
+  [cell.whoLabel setText:event.description];
+  [cell.locationLabel setText:event.event_url];
+  [cell.descriptionLabel setText:event.description];
   
   return cell;
 }
-
 @end
