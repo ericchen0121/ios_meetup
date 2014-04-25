@@ -13,6 +13,8 @@
 		45CBA7361908E07000E74EEA /* MeetupManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CBA7351908E07000E74EEA /* MeetupManager.m */; };
 		45CBA7391909A1F800E74EEA /* EventBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CBA7381909A1F800E74EEA /* EventBuilder.m */; };
 		45CBA73C1909A53300E74EEA /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CBA73B1909A53300E74EEA /* Event.m */; };
+		45CBA73F190AEDD800E74EEA /* NYCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CBA73E190AEDD800E74EEA /* NYCTableViewController.m */; };
+		45CBA742190AF3E700E74EEA /* NYCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45CBA741190AF3E700E74EEA /* NYCTableViewCell.m */; };
 		4EFE4B7517BE879700DD023B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE4B7417BE879700DD023B /* UIKit.framework */; };
 		4EFE4B7717BE879700DD023B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE4B7617BE879700DD023B /* Foundation.framework */; };
 		4EFE4B7917BE879700DD023B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFE4B7817BE879700DD023B /* CoreGraphics.framework */; };
@@ -43,6 +45,10 @@
 		45CBA7381909A1F800E74EEA /* EventBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBuilder.m; sourceTree = "<group>"; };
 		45CBA73A1909A53300E74EEA /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		45CBA73B1909A53300E74EEA /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		45CBA73D190AEDD800E74EEA /* NYCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYCTableViewController.h; sourceTree = "<group>"; };
+		45CBA73E190AEDD800E74EEA /* NYCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYCTableViewController.m; sourceTree = "<group>"; };
+		45CBA740190AF3E700E74EEA /* NYCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYCTableViewCell.h; sourceTree = "<group>"; };
+		45CBA741190AF3E700E74EEA /* NYCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYCTableViewCell.m; sourceTree = "<group>"; };
 		4EFE4B7117BE879700DD023B /* BrowseMeetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrowseMeetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EFE4B7417BE879700DD023B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EFE4B7617BE879700DD023B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,6 +138,10 @@
 				45CBA7381909A1F800E74EEA /* EventBuilder.m */,
 				45CBA73A1909A53300E74EEA /* Event.h */,
 				45CBA73B1909A53300E74EEA /* Event.m */,
+				45CBA73D190AEDD800E74EEA /* NYCTableViewController.h */,
+				45CBA73E190AEDD800E74EEA /* NYCTableViewController.m */,
+				45CBA740190AF3E700E74EEA /* NYCTableViewCell.h */,
+				45CBA741190AF3E700E74EEA /* NYCTableViewCell.m */,
 			);
 			name = "Read JSON";
 			path = "Browse Meetup";
@@ -222,6 +232,8 @@
 				45CBA73C1909A53300E74EEA /* Event.m in Sources */,
 				4EFE4B8517BE879700DD023B /* AppDelegate.m in Sources */,
 				45CBA72B19087AB800E74EEA /* Group.m in Sources */,
+				45CBA73F190AEDD800E74EEA /* NYCTableViewController.m in Sources */,
+				45CBA742190AF3E700E74EEA /* NYCTableViewCell.m in Sources */,
 				45CBA73219088D3100E74EEA /* GroupBuilder.m in Sources */,
 				45CBA7391909A1F800E74EEA /* EventBuilder.m in Sources */,
 				45CBA7361908E07000E74EEA /* MeetupManager.m in Sources */,
